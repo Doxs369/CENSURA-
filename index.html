@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MultyEye Mobile - Webcam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="setup-screen">
+            <h1>MultyEye</h1>
+            <p id="status-text">Stato: Avvio...</p>
+            <div id="ip-container" style="display: none; margin-top: 20px;">
+                <p>Inserisci l'IP del PC:</p>
+                <input type="text" id="ip-input" placeholder="es. 192.168.1.50">
+                <button id="start-btn">CONNETTI</button>
+            </div>
+        </div>
+
+        <div id="camera-screen" style="display: none;">
+            <video id="webcam" autoplay playsinline style="display:none;"></video>
+            <canvas id="output-canvas"></canvas>
+            <div id="overlay-controls">
+                <div id="info-text">Invia dati al PC...</div>
+                <button id="stop-btn">STOP</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
