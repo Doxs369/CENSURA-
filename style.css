@@ -1,0 +1,9 @@
+/* Stile per la lista dei dispositivi trovati */
+#device-ul li button {
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MultyEye Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app-container">
+        <div id="setup-screen">
+            <h1>MultyEye</h1>
+            
+            <!-- Sezione Scansione Automatica -->
+            <button id="scan-btn" style="background-color: #348F86; margin-bottom: 20px;">CERCA PC SULLA RETE</button>
+            <div id="device-list" style="display: none; margin-bottom: 20px;">
+                <p>Dispositivi trovati (clicca per connetterti):</p>
+                <ul id="device-ul" style="list-style: none; padding: 0;"></ul>
+            </div>
+
+            <!-- Sezione Manuale (Fallback) -->
+            <p>Oppure inserisci l'IP manualmente:</p>
+            <input type="text" id="ip-input" placeholder="es. 192.168.1.50" value="">
+            <button id="start-btn">CONNETTI E AVVIA</button>
+            
+            <p id="status-text">Stato: In attesa</p>
+        </div>
+
+        <div id="camera-screen" style="display: none;">
+            <video id="webcam" autoplay playsinline style="display:none;"></video>
+            <canvas id="output-canvas"></canvas>
+            <div id="overlay-controls">
+                <div id="current-mode">Modalità: Occhi</div>
+                <button id="stop-btn">STOP</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
