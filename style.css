@@ -1,0 +1,21 @@
+:root {
+    --bg-scuro: #2C8C82;
+    --bg-chiaro: #F4F1EA;
+    --primario: #348F86;
+    --accento: #D67B5D;
+    --testo-scuro: #2D3134;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { background-color: var(--bg-scuro); color: var(--bg-chiaro); height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+#app-container { width: 100%; height: 100%; display: flex; flex-direction: column; }
+#setup-screen { background-color: var(--bg-chiaro); color: var(--testo-scuro); margin: 20px; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+#setup-screen h1 { color: var(--primario); margin-bottom: 20px; font-size: 2.5rem; }
+#scan-status { font-size: 1.2rem; margin-bottom: 20px; font-weight: bold; }
+#device-list ul li button {
+    width: 100%; padding: 15px; margin-top: 10px; font-size: 1.1rem;
+    background-color: var(--accento); color: white; border: none; border-radius: 10px; cursor: pointer;
+}
+#camera-screen { position: relative; width: 100%; height: 100%; background-color: black; }
+#output-canvas { width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+#overlay-controls { position: absolute; top: 20px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; background: rgba(44, 140, 130, 0.8); padding: 10px 20px; border-radius: 50px; }
+#stop-btn { background-color: var(--accento); color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; }
